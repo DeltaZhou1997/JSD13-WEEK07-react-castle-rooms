@@ -1,8 +1,8 @@
 export default function SecretRoom ({question, answer, handleAnswer}) {
 
     return (
-        <div className="flex flex-col justify-center items-center pt-10 rounded-xl bg-gray-700 text-white w-[90%]">
-            <h1>Secret Room</h1>
+        <div className="flex flex-col justify-center items-center pt-10 rounded-xl bg-gray-700 w-[90%]">
+            <h1 className="text-xl text-white">Secret Room</h1>
 
             <p className="text-purple-300">
                 Message from the outside: {" "}
