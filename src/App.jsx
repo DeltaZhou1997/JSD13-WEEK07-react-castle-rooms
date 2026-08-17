@@ -37,7 +37,7 @@ export default function App() {
         </span>
       </p>
 
-      <Castle answer="{answer}" question="{question} handleAnswer={handleAnswer}"/>
+      <Castle question={question} answer={answer} handleAnswer={handleAnswer}/>
     </div>
   );
 }

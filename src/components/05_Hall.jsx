@@ -1,6 +1,6 @@
 import Corridor from "./06_Corridor";
-
-export default function Hall({ question, answer }) {
+export default function Hall({ question, answer, handleAnswer }) {
+  
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-emerald-500 pt-10">
       <h1 className="text-xl text-white">Hall</h1>
@@ -8,7 +8,7 @@ export default function Hall({ question, answer }) {
               <p className="text-purple-300">
             Message for Secret Room: {" "}
             <span className="text-yellow-300">
-              {answer ? `✅${answer}` : "⌛Waiting for a message..."}
+              {question ? `✅${question}` : "⌛Waiting for a message..." }
             </span>
         </p>
         
@@ -19,7 +19,7 @@ export default function Hall({ question, answer }) {
             </span>
         </p>
 
-      <Corridor question={question} answer={answer} />
+      <Corridor question={question} answer={answer} handleAnswer={handleAnswer} />
     </div>
   );
 }

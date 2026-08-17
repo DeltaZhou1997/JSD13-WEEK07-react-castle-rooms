@@ -1,12 +1,13 @@
 export default function SecretRoom ({question, answer, handleAnswer}) {
+
     return (
         <div className="flex flex-col justify-center items-center pt-10 rounded-xl bg-gray-700 text-white w-[90%]">
             <h1>Secret Room</h1>
-            {/*Render chamber here */}
+
             <p className="text-purple-300">
-                Message for Secret Room: {" "}
+                Message from the outside: {" "}
                 <span>
-                    {question ? `${question}` : "Waiting for a message..."}
+                    {question ? `✅${question}` : "⌛Waiting for a message..."}
                 </span>
             </p>
             
