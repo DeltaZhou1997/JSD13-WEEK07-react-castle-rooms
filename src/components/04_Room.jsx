@@ -1,5 +1,5 @@
 import Hall from "./05_Hall";
-export default function Room({ question, answer, handleAnswer }) {
+export default function Room({ question, answer, handleAnswer, rescuePhase, setRescuePhase }) {
 
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-green-500 pt-10">
@@ -19,7 +19,7 @@ export default function Room({ question, answer, handleAnswer }) {
             </span>
         </p> */}
 
-      <Hall question={question} answer={answer} handleAnswer={handleAnswer} />
+      <Hall question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Gallery from "./07_Gallery";
-export default function Corridor({ question, answer, handleAnswer }) {
+export default function Corridor({ question, answer, handleAnswer, rescuePhase, setRescuePhase }) {
 
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-blue-500 pt-10">
@@ -19,7 +19,7 @@ export default function Corridor({ question, answer, handleAnswer }) {
             </span>
         </p> */}
 
-      <Gallery question={question} answer={answer} handleAnswer={handleAnswer} />
+      <Gallery question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
     </div>
   );
 }

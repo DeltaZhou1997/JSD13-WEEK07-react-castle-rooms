@@ -1,6 +1,6 @@
 import Nook from "./08_Nook";
 
-export default function Gallery({ question, answer, handleAnswer }) {
+export default function Gallery({ question, answer, handleAnswer, rescuePhase, setRescuePhase }) {
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-indigo-500 pt-10">
       <h1 className="text-xl text-white">Gallery</h1>
@@ -19,7 +19,7 @@ export default function Gallery({ question, answer, handleAnswer }) {
             </span>
         </p> */}
 
-      <Nook question={question} answer={answer} handleAnswer={handleAnswer} />
+      <Nook question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Chamber from "./03_Chamber";
-export default function Tower({question, answer, handleAnswer}) {
+export default function Tower({question, answer, handleAnswer, rescuePhase, setRescuePhase}) {
     console.log(question, answer)
 
     return (
@@ -19,7 +19,7 @@ export default function Tower({question, answer, handleAnswer}) {
                     {answer ? `✅${answer}` : "⌛Waiting for a message..."}
                 </span>
             </p> */}
-            <Chamber question={question} answer={answer} handleAnswer={handleAnswer} />
+            <Chamber question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
         </div>
     );
 }
