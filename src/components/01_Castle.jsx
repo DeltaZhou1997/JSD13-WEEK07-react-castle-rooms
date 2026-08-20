@@ -1,5 +1,5 @@
 import Tower from "./02_Tower";
-export default function Castle({question, answer, handleAnswer, rescuePhase, setRescuePhase}) {
+export default function Castle({question, answer, handleAnswer, rescuePhase, setRescuePhase, prisonerId}) {
     console.log(question, answer, handleAnswer)
     
     return (
@@ -19,7 +19,7 @@ export default function Castle({question, answer, handleAnswer, rescuePhase, set
                  </span>
             </p> */}
 
-            <Tower question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
+            <Tower question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase} prisonerId={prisonerId}/>
         </div>
     );
 }

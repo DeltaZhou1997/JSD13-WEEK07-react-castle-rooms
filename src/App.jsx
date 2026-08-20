@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import Castle from "./components/01_Castle";
 import Pokemon from "./components/Pokemon"; // นำเข้า Component โปเกมอนที่เพิ่งสร้าง
+import Confetti from "react-confetti"; // เอา Confetti เข้ามาด้วย
 
 export default function App() {
   const [question, setQuestion] =useState ("");
   const [answer, setAnswer] =useState ("");
   const [rescuePhase, setRescuePhase] = useState(0); 
   const [progress, setProgress] = useState(0);
+
+  const [prisonerId] = useState(Math.floor(Math.random() * 1025) + 1); //ใช้สุ่มตัวนักโทษโปเกมอน PokeAPI รองรับถึงแค่ ID 1025 สำหรับร่างหลัก
   
   const handleQuestion = (e) => {
     console.log (e);
@@ -42,6 +45,8 @@ export default function App() {
   return (
 
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-800 text-white pb-80 py-10 gap-y-4">
+
+      {rescuePhase === 7 && <Confetti width={window.innerWidth} height={window.innerHeight} />}
 
       {/* ================= ส่วนของเกม (ด้านนอกปราสาท) ================= */}
       <div className="flex flex-col items-center mb-10 min-h-40">
@@ -130,6 +135,7 @@ export default function App() {
         handleAnswer={handleAnswer} 
         rescuePhase={rescuePhase} 
         setRescuePhase={setRescuePhase} 
+        prisonerId={prisonerId}
       />
     </div>
   );

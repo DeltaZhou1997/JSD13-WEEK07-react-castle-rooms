@@ -1,6 +1,6 @@
 import Pokemon from "./Pokemon";
 
-export default function SecretRoom ({question, answer, handleAnswer, rescuePhase, setRescuePhase}) {
+export default function SecretRoom ({question, answer, handleAnswer, rescuePhase, setRescuePhase, prisonerId}) {
     console.log("Current rescuePhase type:", typeof rescuePhase, "Value:", rescuePhase);
 
     return (
@@ -11,12 +11,12 @@ export default function SecretRoom ({question, answer, handleAnswer, rescuePhase
             <div className="flex flex-col items-center w-full">
                 
                 {/* กล่องขังนักโทษ (แสดงตั้งแต่เริ่ม จนกว่าจะหนีสำเร็จใน Phase 7) */}
-                {rescuePhase < 7 ? (
+                {rescuePhase < 6 ? ( //เปลี่ยนเป็น < 6 เพื่อให้ออกจากกรงตอน Phase 6
                     <div className="border-2 border-pink-500 p-8 rounded-md mb-6 flex flex-col items-center bg-gray-600">
                         <p className="text-red-300 mb-2 font-bold">A prisoner is trapped here!</p>
-                        {/* ตัวนักโทษ ใส่เป็น Emoji หินไปก่อนตามภาพ */}
-                        <span className="text-6xl mb-2">🪨</span>
-                        <p className="text-gray-400 text-sm">Tommy</p>
+                        <div className="bg-gray-800 p-4 rounded-full border-2 border-dashed border-gray-400 mb-2">
+                           <Pokemon name={prisonerId.toString()} />
+                        </div>
                     </div>
                 ) : (
                     // Phase 7: หนีสำเร็จ
@@ -64,11 +64,19 @@ export default function SecretRoom ({question, answer, handleAnswer, rescuePhase
                 )}
 
                 {/* Phase 6: กำลังขึ้นยาน + ปุ่มสีเหลือง */}
-                {rescuePhase === 6 && (
+                {rescuePhase === 6 && ( 
                     <div className="flex flex-col items-center mb-6">
                         <div className="border-2 border-pink-500 p-8 rounded-md mb-4 flex flex-col items-center bg-gray-600 opacity-50">
                            <p className="text-gray-300 font-bold">Entering the pod...</p>
+                           <div className="flex gap-4 items-center flex-wrap justify-center">
+                               <Pokemon name="pikachu" />
+                                <Pokemon name="bulbasaur" />
+                                <Pokemon name="charmander" />
+                                <Pokemon name="squirtle" />
+                                <Pokemon name={prisonerId.toString()} />
+                           </div>
                         </div>
+                        
                         <button 
                             onClick={() => setRescuePhase(7)} 
                             className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded font-bold border-2 border-yellow-300 shadow-[0_0_10px_rgba(234,179,8,0.8)]"

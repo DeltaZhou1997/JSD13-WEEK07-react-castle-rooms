@@ -1,5 +1,5 @@
 import Room from "./04_Room";
-export default function Chamber({ question, answer, handleAnswer, rescuePhase, setRescuePhase}) {
+export default function Chamber({ question, answer, handleAnswer, rescuePhase, setRescuePhase, prisonerId}) {
 
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-yellow-400 pt-10">
@@ -18,7 +18,7 @@ export default function Chamber({ question, answer, handleAnswer, rescuePhase, s
             </span>
         </p> */}
 
-      <Room question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase}/>
+      <Room question={question} answer={answer} handleAnswer={handleAnswer} rescuePhase={rescuePhase} setRescuePhase={setRescuePhase} prisonerId={prisonerId}/>
     </div>
   );
 }
