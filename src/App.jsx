@@ -124,7 +124,13 @@ export default function App() {
         </span>
       </p>
 
-      <Castle question={question} answer={answer} handleAnswer={handleAnswer}/>
+      <Castle 
+        question={question} 
+        answer={answer} 
+        handleAnswer={handleAnswer} 
+        rescuePhase={rescuePhase} 
+        setRescuePhase={setRescuePhase} 
+      />
     </div>
   );
 }

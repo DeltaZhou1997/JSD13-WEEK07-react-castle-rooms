@@ -1,7 +1,7 @@
 import Pokemon from "./Pokemon";
-console.log("Current rescuePhase type:", typeof rescuePhase, "Value:", rescuePhase);
 
 export default function SecretRoom ({question, answer, handleAnswer, rescuePhase, setRescuePhase}) {
+    console.log("Current rescuePhase type:", typeof rescuePhase, "Value:", rescuePhase);
 
     return (
         <div className="flex flex-col justify-center items-center pt-10 rounded-xl bg-gray-700 w-[90%]">
