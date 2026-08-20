@@ -1,4 +1,9 @@
-export default function SecretRoom ({question, answer, handleAnswer}) {
+import { useContext} from "react";
+import { MessageContext } from "../context/messageContext/MessageContext";
+
+
+export default function SecretRoom ( ) {
+    const {question, answer, handleQuestion, handleAnswer} = useContext (MessageContext)
 
     return (
         <div className="flex flex-col justify-center items-center pt-10 rounded-xl bg-gray-700 w-[90%]">
@@ -24,7 +29,6 @@ export default function SecretRoom ({question, answer, handleAnswer}) {
                        {answer ? `✅ ${answer}` : "⏳ Waiting for a reply...."}
                 </span>
              </p>
-
         </div>
     );
 }

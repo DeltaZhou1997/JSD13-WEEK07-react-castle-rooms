@@ -1,5 +1,5 @@
 import SecretRoom from "./09_SecretRoom";
-export default function Nook({ question, answer, handleAnswer }) {
+export default function Nook( ) {
 
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-purple-500 pt-10">
@@ -19,7 +19,7 @@ export default function Nook({ question, answer, handleAnswer }) {
             </span>
         </p> */}
 
-      <SecretRoom question={question} answer={answer} handleAnswer={handleAnswer} />
+      <SecretRoom />
     </div>
   );
 }

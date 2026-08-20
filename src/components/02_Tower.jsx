@@ -1,6 +1,5 @@
 import Chamber from "./03_Chamber";
-export default function Tower({question, answer, handleAnswer}) {
-    console.log(question, answer)
+export default function Tower( ) {
 
     return (
         <div className="mt-5 flex flex-col justify-center items-center pt-10 bg-orange-500 w-11/12"> 
@@ -19,7 +18,7 @@ export default function Tower({question, answer, handleAnswer}) {
                     {answer ? `✅${answer}` : "⌛Waiting for a message..."}
                 </span>
             </p> */}
-            <Chamber question={question} answer={answer} handleAnswer={handleAnswer} />
+            <Chamber />
         </div>
     );
 }

@@ -1,6 +1,5 @@
 import Tower from "./02_Tower";
-export default function Castle({question, answer, handleAnswer}) {
-    console.log(question, answer, handleAnswer)
+export default function Castle() {
     
     return (
         <div className="mt-5 flex flex-col justify-center items-center pt-10 bg-red-500 w-full">
@@ -19,7 +18,7 @@ export default function Castle({question, answer, handleAnswer}) {
                  </span>
             </p> */}
 
-            <Tower question={question} answer={answer} handleAnswer={handleAnswer}/>
+            <Tower />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import Corridor from "./06_Corridor";
-export default function Hall({ question, answer, handleAnswer }) {
+export default function Hall( ) {
 
   return (
     <div className="mt-5 flex w-11/12 flex-col items-center bg-emerald-500 pt-10">
@@ -19,7 +19,7 @@ export default function Hall({ question, answer, handleAnswer }) {
             </span>
         </p> */}
 
-      <Corridor question={question} answer={answer} handleAnswer={handleAnswer} />
+      <Corridor />
     </div>
   );
 }
